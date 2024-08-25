@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Layout>
-      <div className='bg-violet-300'>I will be the goat in programming, I promise you Alireza!</div>
+      <div className='bg-violet-300'>Kire Khar!</div>
     </Layout>
   </React.StrictMode>
 );
