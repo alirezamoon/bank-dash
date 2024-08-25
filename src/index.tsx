@@ -1,6 +1,10 @@
+import Dashboard from 'Comonents/dashboard';
 import Layout from 'Comonents/Layout';
+import NotFound from 'Comonents/notFound';
+import Transactions from 'Comonents/transactions';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 
 const root = ReactDOM.createRoot(
@@ -9,8 +13,14 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Layout>
-      <div className='bg-violet-300'>Kire Khar!</div>
-    </Layout>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route index element={<Dashboard />} />
+          <Route path="transactions" element={<Transactions />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   </React.StrictMode>
 );

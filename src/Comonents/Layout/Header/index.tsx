@@ -2,19 +2,19 @@ import Button from "Comonents/common/button";
 import { HambergerMenu, Notification, Setting2, User } from "iconsax-react";
 import SearchPanel from "./searchPanel";
 
-interface HeaderProps {
-    handleToggleMenu: () => void;
+type HeaderProps = {
+    onToggleMenu: () => void
 }
 
-const Header = (props: HeaderProps) => {
+const Header = ({ onToggleMenu }: HeaderProps) => {
 
     return (
         <div className="h-36 md:h-20 lg:h-24">
-            <div className="fixed bg-white h-36 w-full md:w-[calc(100%-16rem)] md:h-20 lg:h-24 px-6 flex flex-col justify-center gap-5">
+            <div className="fixed bg-white h-36 w-full md:w-[calc(100%-16rem)] md:h-20 lg:h-24 px-6 flex flex-col justify-center gap-5 border-b border-sky-100">
                 <div className="flex justify-between items-center">
                     <button
                         className="md:hidden"
-                        onClick={props.handleToggleMenu}
+                        onClick={onToggleMenu}
                     >
                         <HambergerMenu
                             className="text-indigo-900 w-8 h-8"

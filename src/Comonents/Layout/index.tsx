@@ -2,11 +2,11 @@ import { useState } from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 
-interface LayoutProps {
+type LayoutProps = {
     children: JSX.Element;
 }
 
-const Layout = (props: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
     const [sideBarOpen, setSideBarOpen] = useState<boolean>(false);
 
     const handleToggleMenu = () => {
@@ -17,11 +17,11 @@ const Layout = (props: LayoutProps) => {
         <div className="h-full flex">
             <SideBar 
                 open={sideBarOpen}
-                handleToggleMenu={handleToggleMenu} />
+                onToggleMenu={handleToggleMenu} />
             <div className="grow flex flex-col">
-                <Header handleToggleMenu={handleToggleMenu} />
-                <div className="grow bg-violet-900">
-                    {props.children}
+                <Header onToggleMenu={handleToggleMenu} />
+                <div className="grow bg-gray-100">
+                    {children}
                 </div>
             </div>
         </div>
