@@ -1,7 +1,5 @@
 const Transactions = () => {
-    return (
-        <div>I am Transactions</div>
-    )
+  return <div>I am Transactions</div>
 }
 
 export default Transactions

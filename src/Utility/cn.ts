@@ -1,7 +1,7 @@
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 const cn = (...classes: (string | undefined | boolean)[]) => {
-  return clsx(classes.filter(Boolean));
-};
+  return clsx(classes.filter(Boolean))
+}
 
 export default cn
